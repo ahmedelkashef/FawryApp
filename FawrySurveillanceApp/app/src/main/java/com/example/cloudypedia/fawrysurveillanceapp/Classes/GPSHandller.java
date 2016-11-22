@@ -141,4 +141,8 @@ public class GPSHandller implements LocationListener {
     public void onProviderDisabled(String s) {
 
     }
+
+    public boolean isCanGetLocation() {
+        return canGetLocation;
+    }
 }

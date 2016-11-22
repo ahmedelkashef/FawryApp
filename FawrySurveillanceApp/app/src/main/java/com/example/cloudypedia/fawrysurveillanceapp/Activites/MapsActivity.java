@@ -48,14 +48,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         gpsHandller = new GPSHandller(this);
        Location location =  gpsHandller.getLocation();
 
-        if(location != null)
-        {
             LatLng currentLocation = new LatLng(location.getLatitude(),location.getLongitude());
             mMap.addMarker(new MarkerOptions().position(currentLocation).title("Mylocation").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation,15));
-        }
 
-       // mMap.addMarker(new MarkerOptions().position(new LatLng(0.0,0.0)).title("Mylocation"));
 
     }
 }
